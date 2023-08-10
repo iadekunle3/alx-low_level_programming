@@ -1,9 +1,9 @@
 #include <stdio.h>
 /**
- * main - This is the function entry
+ * main - This is my work
  *
- * Description: To determine the size
- * Return: should be 0
+ * Description: It is to print
+ * Return: 0 Always
  */
 int main(void)
 {
