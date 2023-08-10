@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -S -mash=intel "$CFILE" -o "2-main.s"
+gcc -S -mash=intel "$CFILE" -o $(basename $CFILE .c).s
