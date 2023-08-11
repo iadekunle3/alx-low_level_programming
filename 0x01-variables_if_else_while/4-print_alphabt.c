@@ -4,7 +4,7 @@
  *
  * Description: This is a print task
  * Return: always (0) success
- * 
+ *
  */
 int main(void)
 {
