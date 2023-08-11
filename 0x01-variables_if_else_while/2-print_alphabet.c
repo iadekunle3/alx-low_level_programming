@@ -1,18 +1,18 @@
 #include <stdio.h>
 
 /**
- * main - Prints numbers between 0 to 9.
+ * main - Prints alphabet  between a to z
  *
- * Description: To print all numbers from 0 to 9
+ * Description: To print all alphabets from a to z
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int i;
+	char g;
 
-	for (i = 48; i < 58; i++)
+	for (g = 'a'; g <= 'z'; g++)
 	{
-		putchar(i);
+		putchar(g);
 	}
 	putchar('\n');
 	return (0);
