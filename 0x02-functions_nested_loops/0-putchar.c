@@ -1,20 +1,20 @@
 #include "main.h"
 
 /**
- * main - start point
- * Description: This is to print putchar
- * Return: 0 always
+ *  main - short start
+ *  _putchar: This is the main program
+ *  Description: This is the program itself
+ *  Return: Depends on instructions
  */
 int main(void)
 {
-	_putchar("_");
-	_putchar("p");
-	_putchar("u");
-	_putchar("t");
-	_putchar("c");
-	_putchar("h");
-	_putchar("a");
-	_putchar("r");
-	_putchar("\n");
+	_putchar('_');
+	_putchar('p');
+	_putchar('u');
+	_putchar('t');
+	_putchar('c');
+	_putchar('h');
+	_putchar('a');
+	_putchar('r');
 	return (0);
 }
