@@ -1,10 +1,9 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- *positive_or_negative - Determine if a number is +ve or _ve or zero
- *@i: integer
- *Return: (0);
+ * positive_or_negative - check if a number is +ve or _ve or zero
+ * @i: integer
+ * Return: (0);
  */
 
 void positive_or_negative(int i)
