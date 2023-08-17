@@ -1,48 +1,21 @@
-#include <stdio.h>
-
+#include "main.h"
 /**
- * main - Print the numbers between 00 to 99.
- * Description: This is the count of tens
- * Return: Always 0 (positive mindset)
+ * print_number - print an integer
+ * @n: parameter, integer value/ input
+ *
  */
-int main(void)
+void print_number(int n)
 {
-int i, e, g, h, op1, op2;
+	unsigned int i = n;
 
-i = e = g = h = 48;
-while (h < 58)
-{
-	g = 48;
-	while (g < 58)
+	if (n < 0)
 	{
-		e = 48;
-		while (e < 58)
-		{
-			i = 48;
-			while (i < 58)
-			{
-				op1 = (h * 10) + g;
-				op2 = (e * 10) + i;
-				if (op1 < op2)
-				{
-					putchar(h);
-					putchar(g);
-					putchar(' ');
-					putchar(e);
-					putchar(i);
-					if (h == 57 && g == 56 && e == 57 && i == 57)
-						break;
-					putchar(',');
-					putchar(' ');
-				}
-				i++;
-			}
-			e++;
-		}
-		g++;
+		_putchar(45);
+		i = -i;
 	}
-	h++;
-}
-putchar('\n');
-return (0);
+	if (i / 10)
+	{
+		print_number(i / 10);
+	}
+	_putchar(i % 10 + '0');
 }
