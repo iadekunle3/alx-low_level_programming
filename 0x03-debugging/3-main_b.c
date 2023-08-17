@@ -19,15 +19,15 @@ int main(void)
 
 	if ((year % 4 == 0 || year % 400 == 0) && !(year % 100 == 0))
 	{
-	if (month >= 2 && day >= 60)
-	{
-		day++;
+		if (month >= 2 && day >= 60)
+		{
+			day++;
+		}
+
+		printf("Date: %02d/%02d/%04d\n", month, day, year);
+		day = convert_day(month, day);
+		print_remaining_days(month, day, year);
 	}
-
-	printf("Date: %02d/%02d/%04d\n", month, day, year);
-	day = convert_day(month, day);
-	print_remaining_days(month, day, year);
-
 	return (0);
 }
 
