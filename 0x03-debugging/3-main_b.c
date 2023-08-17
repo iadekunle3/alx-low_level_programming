@@ -24,9 +24,10 @@ int main(void)
 		day++;
 	}
 
-	printf("Day of the year: %d\n", day);
-	printf("Remaining days: %d\n", 366 - day);
-	}
+	printf("Date: %02d/%02d/%04d\n", month, day, year);
+	day = convert_day(month, day);
+	print_remaining_days(month, day, year);
+
 	return (0);
 }
 
