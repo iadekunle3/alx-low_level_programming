@@ -1,8 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - this is an infinite loop
- * Description: about the infinit loop
+ * main - causes an infinite loop
  * Return:(0);
  */
 
@@ -10,7 +9,7 @@ int main(void)
 {
 	int i;
 
-	printf("inifint loop incoming :(\n");
+	printf("inifinte loop incoming :(\n");
 
 	i = 0;
 
@@ -18,8 +17,8 @@ int main(void)
 	 *while (i < 10)
 	 *{
 	 *putchar(i);
-	 *}
+	 }
 	 */
-	printf("infinit loop avoided! \\o/\n");
+	printf("infinite loop avoided! \\o/\n");
 	return (0);
 }
