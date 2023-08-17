@@ -3,14 +3,14 @@
 /**
  * main - this is an infinite loop
  * Description: about the infinit loop
- * Return: (0);
+ * Return:(0);
  */
 
 int main(void)
 {
 	int i;
 
-	printf("inifint loop incoming :(\\\n");
+	printf("inifint loop incoming :(\n");
 
 	i = 0;
 
