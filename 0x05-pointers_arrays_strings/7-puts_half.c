@@ -1,24 +1,27 @@
 #include "main.h"
-#include <stdio.h>
-#include <string.h>
 /**
- * puts_half - is to print half of string
- * @str: is the string user value
+ * puts_half - prints the remianing of a string
+ *
+ * @str: the string input
+ *
+ * Return: void
  */
 void puts_half(char *str)
 {
-	int n = strlen(str);
-	int first = n / 2;
-	int i = first;
+	int len = 0;
+	int half, k;
 
-	if (n % 2 != 0)
+	while (str[len] != '\0')
 	{
-		first = (n - 1) / 2;
+		len++;
 	}
-	while (i < n)
+
+	half = (len - 1) / 2;
+
+	for (k = (half + 1); k < len; k++)
 	{
-		putchar(str[i]);
-		i++;
+		_putchar(str[k]);
 	}
-	putchar('\n');
+
+	_putchar('\n');
 }
