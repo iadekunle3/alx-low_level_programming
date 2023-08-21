@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * puts_half - prints the remianing of a string
  *
@@ -20,8 +21,7 @@ void puts_half(char *str)
 
 	for (k = (half + 1); k < len; k++)
 	{
-		_putchar(str[k]);
+		putchar(str[k]);
 	}
-
-	_putchar('\n');
+	putchar('\n');
 }
