@@ -2,7 +2,7 @@
 /**
  *  _strlen - is the check the string length
  * @s: is the integer used
- * Return - (length) if successful
+ * Return: (length) if successful
  */
 int _strlen(char *s)
 {
