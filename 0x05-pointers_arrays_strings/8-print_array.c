@@ -3,7 +3,7 @@
 /**
  * print_arrays - is the function to print arrays
  * @n: is the second integer
- * @*a: is the arrays
+ * @a: is the arrays
  */
 void print_array(int *a, int n)
 {
