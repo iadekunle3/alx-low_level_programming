@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * print_arrays - is the function to print arrays
+ * print_array - is the function to print arrays
  * @n: is the second integer
  * @a: is the arrays
  */
