@@ -13,16 +13,20 @@ char *cap_string(char *string)
 
 	while (string[i] != '\0')
 	{
-		if (isspace(string[i]))
+		if (string[i] == ' ' || string[i] == '\t' || string[i] == '\n' ||
+		string[i] == ',' || string[i] == ';' || string[i] == '.' ||
+		string[i] == '!' || string[i] == '?' || string[i] == '"' ||
+		string[i] == '(' || string[i] == ')' || string[i] == '{' ||
+		string[i] == '}')
 		{
 			capitalize_next = 1;
 		}
-			else if (capitalize_next)
-			{
-				string[i] = toupper(string[i]);
-				capitalize_next = 0;
-			}
-			i++;
+		else if (capitalize_next)
+		{
+			string[i] = toupper(string[i]);
+			capitalize_next = 0;
+		}
+		i++;
 	}
 	return (0);
 }
