@@ -2,10 +2,10 @@
 #include <stdio.h>
 /**
  * string_toupper - is the lowercase function
- * @(char ): is the value for string
+ * @s: is the value for string
  * Return: as specified
  */
-char *string_toupper(char *)
+char *string_toupper(char *s)
 {
 	int i = 0;
 
