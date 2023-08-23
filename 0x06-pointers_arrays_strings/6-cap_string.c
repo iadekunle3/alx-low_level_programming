@@ -24,5 +24,5 @@ char *cap_string(char *string)
 			}
 			i++;
 	}
+	return (0);
 }
-
