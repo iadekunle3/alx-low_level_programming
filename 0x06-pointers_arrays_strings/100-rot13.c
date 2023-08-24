@@ -8,29 +8,16 @@
  */
 char *rot13(char *str)
 {
-	int i = 0;
-	int j = 0;
-
-	while (str[i])
+	for(int i = 0; str[i]; i++)
 	{
-		j = 0;
-		while (j < 13)
-		{
-			if ((str[i] >= 'a' && str[i] < 'z') || (str[i] >= 'A' && str[i] < 'Z'))
-			{
-				str[i]++;
-			}
-			else if (str[i] == 'z')
-			{
-				str[i] = 'a';
-			}
-			else if (str[i] == 'Z')
-			{
-				str[i] = 'A';
-			}
-			j++;
-		}
-		i++;
+	if(('a' <= str[i] && str[i] <= 'm') || ('A' <= str[i] && str[i] <= 'M'))
+	{
+		str[i] += 13;       
+	}
+	else if(('n' <= str[i] && str[i] <= 'z') || ('N' <= str[i] && str[i] <= 'Z'))
+	{
+		str[i] -= 13;
 	}
 	return (str);
 }
+
