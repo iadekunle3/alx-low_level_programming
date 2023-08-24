@@ -1,5 +1,6 @@
-#include <stdio.h>
+#include "main.h"
 #include <string.h>
+#include <stdio.h>
 /**
  * infinite_add - is the function that adds two int
  * @n1: is the first number
@@ -29,16 +30,14 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		if (carry)
 		r[n] -= 10;
 	}
-
 	r[n] = '\0';
 
-	for (i = 0; i < n / 2; i++)
-	{
-		char c = r[i];
-		r[i] = r[n - i - 1];
-		r[n - i - 1] = c;
-	}
+		for (i = 0; i < n / 2; i++)
+		{
+			char c = r[i];
+			r[i] = r[n - i - 1];
+			r[n - i - 1] = c;
+		}
 
 	return (r);
 }
-
