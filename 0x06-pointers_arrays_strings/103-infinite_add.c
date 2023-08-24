@@ -12,22 +12,22 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
 	int i, j, n, l1, l2, cary = 0;
 
-	len1 = strlen(n1);
-	len2 = strlen(n2);
+	l1 = strlen(n1);
+	l2 = strlen(n2);
 
 	for (i = l1 - 1, j = l2 - 1, n = 0; i >= 0 || j >= 0 || cary; i--, j--, n++)
 	{
 		if (n >= size_r - 1)
 		return (0);
 
-		r[n] = carry + '0';
+		r[n] = cary + '0';
 		if (i >= 0)
 		r[n] += n1[i] - '0';
 		if (j >= 0)
 		r[n] += n2[j] - '0';
 
-		carry = r[n] > '9';
-		if (carry)
+		cary = r[n] > '9';
+		if (cary)
 		r[n] -= 10;
 	}
 	r[n] = '\0';
