@@ -10,12 +10,12 @@
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int i, j, n, len1, len2, carry = 0;
+	int i, j, n, l1, l2, cary = 0;
 
 	len1 = strlen(n1);
 	len2 = strlen(n2);
 
-	for (i = len1 - 1, j = len2 - 1, n = 0; i >= 0 || j >= 0 || carry; i--, j--, n++)
+	for (i = l1 - 1, j = l2 - 1, n = 0; i >= 0 || j >= 0 || cary; i--, j--, n++)
 	{
 		if (n >= size_r - 1)
 		return (0);
@@ -35,6 +35,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		for (i = 0; i < n / 2; i++)
 		{
 			char c = r[i];
+
 			r[i] = r[n - i - 1];
 			r[n - i - 1] = c;
 		}
