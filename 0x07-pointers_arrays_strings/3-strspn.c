@@ -10,14 +10,11 @@
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	size_t len;
+	size_t len = 0;
 
-	for (len = 0; *s; s++, len++)
+	while (*s && strchr(accept, s++))
 	{
-		if (strchr(accept, *s))
-		{
-			break;
-		}
+		len++;
 	}
 	return (len);
 }
