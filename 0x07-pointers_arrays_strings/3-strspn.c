@@ -14,9 +14,9 @@ unsigned int _strspn(char *s, char *accept)
 
 	for (len = 0; *s; s++, len++)
 	{
-		if (! strchr(accept, *s))
+		if (strchr(accept, *s))
 		{
-			break;
+			return (0);
 		}
 	}
 	return (len);
