@@ -1,19 +1,20 @@
 #include "main.h"
+#include <stddef.h>
 /**
  * _strchr - is used to search for character
- * @i: is the string value
- * @j: is the character used
+ * @s: is the string value
+ * @c: is the character used
  * Return: as specified
  */
-char *_strchr(char *i, char j)
+char *_strchr(char *s, char c)
 {
-	while (*i != '\0')
+	while (*s != '\0')
 	{
-		if (*i == j)
+		if (*s == c)
 		{
-			return (j);
+			return (s);
 		}
-		j++;
+		s++;
 	}
 	return (NULL);
 }
