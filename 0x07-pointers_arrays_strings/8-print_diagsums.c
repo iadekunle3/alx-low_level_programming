@@ -12,8 +12,8 @@ void print_diagsums(int *a, int size)
 
 	for (i = 0; i < size; i++)
 	{
-		sum1 += matrix[i][i];
-		sum2 += matrix[i][size - i - 1];
+		sum1 += a[(size + 1 * i)];
+		sum2 += a[(size - 1) * (i + 1)];
 	}
 	printf("sum of first diagonal: %d\n", sum1);
 	printf("sum of second diagonal: %d\n", sum2);
