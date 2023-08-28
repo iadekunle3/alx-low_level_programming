@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stddef.h>
+#include <string.h>
 /**
  * _strspn - is the function that takes length
  * @s: is the string value
@@ -13,7 +14,7 @@ unsigned int _strspn(char *s, char *accept)
 
 	for (len = 0; *s; s++, len++)
 	{
-		if (!strchr(accept, *s))
+		if (! strchr(accept, *s))
 		{
 			break;
 		}
