@@ -11,10 +11,10 @@ int _sqrt(int n)
 	{
 		return (-1);
 	}
-	double result = sqrt(n);
-	if (result == (int)result)
+	int result = sqrt(n);
+	if (result * result == n)
 	{
-		return result;
+		return (result);
 	}
 	else
 	{
