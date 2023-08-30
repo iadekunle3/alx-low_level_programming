@@ -14,8 +14,10 @@ int _sqrt(int n)
 	double result = sqrt(n);
 	if (result == (int)result)
 	{
-		return (result);
+		return result;
 	}
 	else
+	{
 		return (-1);
+	}
 }
