@@ -13,14 +13,12 @@ int is_prime_number(int n)
 	{
 		return (0);
 	}
-	else if (i * i > n)
+	if (i * i > n)
 	{
 		return (1);
 	}
-	else (n % i == 0)
-	{
+	if(n % i == 0)
 		return (0);
-	}
 	return (is_prime_number(n, i + 1);
 }
 /**
