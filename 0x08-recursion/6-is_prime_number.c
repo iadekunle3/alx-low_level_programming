@@ -1,11 +1,11 @@
 #include "main.h"
 /**
- * is_prime_number - is the main function
+ * prime_a - is the main function
  * @n: is the user input
  * Return: as specified
  *
  */
-int is_prime_number(int n)
+int prime_a(int n)
 {
 	int i = 2;
 
@@ -19,5 +19,5 @@ int is_prime_number(int n)
 	}
 	if(n % i == 0)
 		return (0);
-	return (is_prime_number(n, i + 1);
+	return (prime_a(n, i + 1);
 }
