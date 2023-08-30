@@ -7,7 +7,7 @@
  */
 int is_prime_number(int n)
 {
-	int i = 0;
+	int i = 2;
 
 	if (n <= 1)
 	{
@@ -20,13 +20,4 @@ int is_prime_number(int n)
 	if(n % i == 0)
 		return (0);
 	return (is_prime_number(n, i + 1);
-}
-/**
- * is_prime_number - print prime number
- * @n: is the user input
- * Return: as specified
- */
-int is_prime_number(int n)
-{
-	return (is_prime_number(n, 2));
 }
