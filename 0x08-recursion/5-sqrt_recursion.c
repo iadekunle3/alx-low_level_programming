@@ -4,8 +4,10 @@
  * @n: is the user input
  * Return: as specified
  */
-int _sqrt_recursion(int n, int i)
+int _sqrt_recursion(int n)
 {
+	int i = 0;
+
 	if (i * i == n)
 	{
 		return (i);
@@ -14,7 +16,7 @@ int _sqrt_recursion(int n, int i)
 	{
 		return (-1);
 	}
-	return (_sqrt_recursion_helper(n, i + 1))
+	return (_sqrt_recursion(n))
 }
 
 int _sqrt_recursion(int n)
@@ -23,5 +25,5 @@ int _sqrt_recursion(int n)
 	{
 		return (-1);
 	}
-	return (_sqrt_recursion_helper(n, 0));
+	return (_sqrt_recursion(n));
 }
