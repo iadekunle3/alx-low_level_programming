@@ -1,4 +1,5 @@
 #include "main.h"
+#include <math.h>
 /**
  * _sqrt_recursion - is the function to print sqr
  * @n: is the user input
@@ -6,24 +7,15 @@
  */
 int _sqrt_recursion(int n)
 {
-	int i = 0;
-
-	if (i * i == n)
-	{
-		return (i);
-	}
-	else if (i * i > n)
-	{
-		return (-1);
-	}
-	return (_sqrt_recursion(n));
-}
-
-int _sqrt_recursion(int n)
-{
 	if (n < 0)
 	{
 		return (-1);
 	}
-	return (_sqrt_recursion(n));
+	double result = sqrt(n);
+	if (result == (int)result)
+	{
+		return (result);
+	}
+	else
+		return (-1);
 }
