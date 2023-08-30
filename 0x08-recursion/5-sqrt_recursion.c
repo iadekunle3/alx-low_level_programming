@@ -11,7 +11,7 @@ int _sqrt_recursion(int n)
 	{
 		return (-1);
 	}
-	double result = sqrt(n);
+	result = sqrt(n);
 	if (result == (int)result)
 	{
 		return (result);
