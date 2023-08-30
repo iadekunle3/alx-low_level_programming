@@ -34,14 +34,3 @@ int is_palindrome(char *s)
 	int length = strlen(s);
 	return (is_palindrome_helper(s, 0, length - 1));
 }
-/**
- * is_palindrome - is the function
- * @s: is the string
- * Return: as specified
- */
-int is_palindrome(char *s)
-{
-	if (*s == '\0')
-		return (1);
-	return (compare_string(s, 0, _strlen_recursion(s) - 1));
-}
