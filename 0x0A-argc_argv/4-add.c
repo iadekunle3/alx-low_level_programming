@@ -16,10 +16,8 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	num1 = atoi(argv[1]);
-	num2 = atoi(argv[2]);
 	sum = num1 + num2;
-
+	
 	printf("%d\n", sum);
 
 	return (0);
