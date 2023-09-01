@@ -1,24 +1,34 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 /**
  * main - is the function name
- * @argc: is the arguement to main
- * @argv: is the array
+ * @argc: is the arguement to print sums
+ * @argv: is the array arguement
  * Return: as specified
  */
 int main(int argc, char *argv[])
 {
-	int num1, num2, sum;
+	int i, sum = 0;
 
-	if (argc != 3)
+	for (i = 1; i < argc; i++)
 	{
-		printf("Error\n");
-		return (1);
+	char *arg = argv[i];
+
+	while (*arg)
+	{
+		if (!isdigit(*arg))
+		{
+			printf("Error\n");
+			return (1);
+		}
+		arg++;
+	}
+		sum += atoi(argv[i]);
 	}
 
-	sum = num1 + num2;
-	
 	printf("%d\n", sum);
 
 	return (0);
 }
+
