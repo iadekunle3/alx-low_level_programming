@@ -2,7 +2,7 @@
 /**
  * main - is the arguement name
  * @argc: is the arguement that accept command
- * @argc: is the array
+ * @argv: is the array
  * Return: as specified
  */
 int main(int argc, char *argv[])
