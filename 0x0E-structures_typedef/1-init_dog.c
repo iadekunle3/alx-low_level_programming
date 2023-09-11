@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "main.h"
+#include "dog.h"
 /**
  * init_dog - is the function to declare variables
  * @d: is the pointer to the defined structure
