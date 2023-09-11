@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "main.h"
+#include "dog.h"
 /**
  * print_dog - is the function to print dog details
  * @d: is the pointer to the dog structure
