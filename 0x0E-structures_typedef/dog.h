@@ -2,6 +2,9 @@
 #define DOG_H
 /**
  * struct dog - is the user input for structure
+ * @name: is the name of the dog
+ * @age: is the age of the dog
+ * @owner: is the owner of the dog
  */
 struct dog
 {
