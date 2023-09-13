@@ -1,72 +1,36 @@
-#include "3-calc.h"
 #include <stdio.h>
-
-/**
- * op_add - add two integers
- * @a: first integer
- * @b: second integer
- *
- * Return: 0 if successful. 1 otherwise.
- */
-
+#include <stdlib.h>
+#include "3-calc.h"
 int op_add(int a, int b)
 {
-	printf("%d\n", a + b);
-	return (0);
+    return (a + b);
 }
-
-/**
- * op_sub - subtract two integers
- * @a: first integer
- * @b: second integer
- *
- * Return: 0 if successful. 1 otherwise.
- */
 
 int op_sub(int a, int b)
 {
-	printf("%d\n", a - b);
-	return (0);
+    return (a - b);
 }
-
-/**
- * op_mul - multiply two integers
- * @a: first integer
- * @b: second integer
- *
- * Return: 0 if successful. 1 otherwise.
- */
 
 int op_mul(int a, int b)
 {
-	printf("%d\n", a * b);
-	return (0);
+    return (a * b);
 }
-
-/**
- * op_div - divides two integers
- * @a: first integer
- * @b: second integer
- *
- * Return: 0 if successful. 1 otherwise.
- */
 
 int op_div(int a, int b)
 {
-	printf("%d\n", a / b);
-	return (0);
+    if (b != 0)
+        return (a / b);
+    else
+        printf("Error: division by zero\n");
+        exit(1);
 }
-
-/**
- * op_mod - modulo of two integers
- * @a: first integer
- * @b: second integer
- *
- * Return: 0 if successful. 1 otherwise.
- */
 
 int op_mod(int a, int b)
 {
-	printf("%d\n", a % b);
-	return (0);
+    if (b != 0)
+        return (a % b);
+    else
+        printf("Error: division by zero\n");
+        exit(1);
 }
+
