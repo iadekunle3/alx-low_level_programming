@@ -1,51 +1,34 @@
-#include "3-calc.h"
-#include <string.h>
-#include <stdio.h>
 #include <stdlib.h>
-
-
+#include "3-calc.h"
+#include <stdio.h>
 /**
- * main - function starts here.
- * @argc: number of arguments in array
- * @argv: array of arguments.
- *
- * Return: 0 if successful. 1 otherwise.
+ * main - is the function itself
+ * @argc: is the arguement count
+ * @argv: is the arguement array
+ * Return: as specified
  */
-
 int main(int argc, char *argv[])
 {
-	int i, j;
+	int num1, num2;
+	int (*operation)(int, int);
 
-	/* Checks number of arguments */
-	if (argc < 4 || argc > 4)
+	if (argc != 4)
 	{
-		printf("Error\n");
-		return (98);
+		printf("Usage: calc num1 operator num2\n");
+		return (1);
 	}
 
-	/* Checks operator validity */
-	if ((*argv[2] != '+' && *argv[2] != '-'
-	&& *argv[2] != '*' && *argv[2] != '/'
-	&& *argv[2] != '%') || (strlen(argv[2]) > 1))
+	num1 = atoi(argv[1]);
+	num2 = atoi(argv[3]);
+	operation = get_op_func(argv[2]);
+
+	if (operation == NULL || (num2 == 0 && (*argv[2] == '/' || *argv[2] == '%')))
 	{
 		printf("Error\n");
-		return (99);
+		return (1);
 	}
 
-	/* Check invalid division by 0 operation */
-	if ((*argv[2] == '/' || *argv[2] == '%')
-	&& *argv[3] == '0')
-	{
-		printf("Error\n");
-		return (100);
-	}
-
-	/* Store arguments in int variables */
-	i = atoi(argv[1]);
-	j = atoi(argv[3]);
-
-	/* Call function to check operator and add */
-	(*get_op_func(argv[2]))(i, j);
-
+	printf("%d\n", operation(num1, num2));
 	return (0);
 }
+
