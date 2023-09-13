@@ -15,11 +15,3 @@ void array_iterator(int *array, size_t size, void (*action)(int))
 		action(array[i]);
 	}
 }
-/**
- * print_function - is the function to print user input
- * @n: is the user input
- */
-void print_function(int n)
-{
-	printf("%d\n", n);
-}
