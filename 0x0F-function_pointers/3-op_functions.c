@@ -18,19 +18,23 @@ int op_mul(int a, int b)
 
 int op_div(int a, int b)
 {
-    if (b != 0)
-        return (a / b);
-    else
-        printf("Error: division by zero\n");
-        exit(1);
+	if (b != 0)
+        	return (a / b);
+	else
+	{
+        	printf("Error: division by zero\n");
+		exit(1);
+	}
 }
 
 int op_mod(int a, int b)
 {
     if (b != 0)
         return (a % b);
-    else
-        printf("Error: division by zero\n");
-        exit(1);
+	else
+	{
+		printf("Error: division by zero\n");
+		exit(1);
+	}
 }
 
