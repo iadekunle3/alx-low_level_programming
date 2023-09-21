@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include "lists.h"
 /**
- * attribute - is the name of the function
- * @constructor: is the gcc specific attribute
- * @premain: is the main function called before execution
+ * premain - is the name of the function
+ * constructor: is the gcc specific attribute
+ * attribute: is the main function called before execution
  */
 void __attribute__((constructor)) premain()
 {
