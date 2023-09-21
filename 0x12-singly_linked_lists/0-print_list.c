@@ -1,7 +1,8 @@
 #include "lists.h"
 /**
  * _strlen: is used to get str length
- * @s: is the sstring pointer
+ * @s: is the string pointer
+ * Return: as specified
  */
 int _strlen(char *s)
 {
@@ -21,7 +22,7 @@ int _strlen(char *s)
 size_t print_list(const list_t *h)
 {
 	size_t i;
-       
+
 	i = 0;
 	while (h != NULL)
 	{
