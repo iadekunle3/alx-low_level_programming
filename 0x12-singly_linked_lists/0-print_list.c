@@ -1,19 +1,5 @@
 #include "lists.h"
-/**
- * _strlen: is used to get str length
- * @s: is the string pointer
- * Return: as specified
- */
-int _strlen(char *s)
-{
-	int i = 0;
 
-	if (!s)
-		return (0);
-	while (*s++)
-		i++;
-	return (i);
-}
 /**
  * print_list - prints all elements
  * @h: is the pointer to the list
