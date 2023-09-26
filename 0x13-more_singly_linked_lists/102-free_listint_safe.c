@@ -1,41 +1,39 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include "lists.h"
-
 /**
- * free_listint_safe - frees a listint_t list
- * @h: double pointer to the head of the list
- *
- * Return: the size of the list that was free’d
+ * free_listint_safe - frees linked list
+ * @h: is the double pointer to the list
+ * Return: as specified
  */
 size_t free_listint_safe(listint_t **h)
 {
-	size_t num = 0;
-	listint_t *slow, *fast, *free_ptr;
+	size_t len = 0;
+	listint_t *i;
 
 	if (h == NULL || *h == NULL)
 		return (0);
 
-	slow = *h;
-	fast = *h;
-
-	while (slow != NULL && fast != NULL && fast->next != NULL)
+	while (*h != NULL)
 	{
-		num++;
-		if (slow == fast && num > 1)
+		len++;
+		if ((void *)*h > (void *)(*h)->next && (*h)->next != NULL)
 		{
-			*h = NULL;
-			return (num);
+			i = (*h)->next;
+			free(*h);
+			*h = i;
+			len++;
 		}
-
-		free_ptr = slow;
-		slow = slow->next;
-		fast = fast->next->next;
-
-		free(free_ptr);
+		else
+		{
+			i = (*h)->next;
+			free(*h);
+			*h = i;
+		}
 	}
 
-	free(slow);
 	*h = NULL;
 
-	return (num);
+	return (len);
 }
 
