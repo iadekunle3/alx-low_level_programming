@@ -1,12 +1,30 @@
 #include "main.h"
 /**
- * binary_to_unit - is the function used to convert binary to unit
- * @b: is the pointer to the binary
+ * binary_to_unit - is used to convert binary to unsigned int
+ * @b: is the pointer
  * Return: as specified
  */
-void binary_to_unit(unsigned long int b)
+unsigned int binary_to_uint(const char *b)
 {
-	if (b > 1)
-		binary_to_unit(b >> 1);
-	_putchar((b & 1) + '0');
+	unsigned int num = 0;
+	int j, span;
+
+	if (!b)
+		return (0);
+
+	for (span = 0; b[span] != '\0'; span++)
+	{
+		if (b[span] < '0' || b[span] > '1')
+			return (0);
+	}
+
+	for (j = 0; j < span; j++)
+	{
+		num <<= 1;
+		if (b[j] == '1')
+			num += 1;
+	}
+
+	return (num);
 }
+
