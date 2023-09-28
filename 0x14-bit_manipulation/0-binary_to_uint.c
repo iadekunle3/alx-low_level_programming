@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * binary_to_unit - is used to convert binary to unsigned int
+ * binary_to_uint - is used to convert binary to unsigned int
  * @b: is the pointer
  * Return: as specified
  */
