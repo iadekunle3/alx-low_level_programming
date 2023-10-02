@@ -2,6 +2,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include "main.h"
+#include <stdio.h>
 
 #define BUFFER_SIZE 1024
 
@@ -13,35 +14,35 @@
  */
 int main(int argc, char *argv[])
 {
-	int file1, file2;
+	int file_from, file_to;
 	ssize_t bytes;
 	char buffer[BUFFER_SIZE];
 
 	if (argc != 3)
 	{
-		dprintf(2, "Usage: cp file_from file_to\n");
+		dprintf(2, "Usage: cp file_from_file_to\n");
        		exit(97);
 	}
-	file1 = open(argv[1], O_RDONLY);
-	if (file1 == -1)
+	file_from = open(argv[1], O_RDONLY);
+	if (file_from == -1)
 	{
 		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-	file2 = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
-	if (file2 == -1)
+	file_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
+	if (file_to == -1)
 	{
 		dprintf(2, "Error: Can't write to %s\n", argv[2]);
-		close(file1);
+		close(file_from);
 		exit(99);
 	}
-	while ((bytes = read(file1, buffer, BUFFER_SIZE)) > 0)
+	while ((bytes = read(file_from, buffer, BUFFER_SIZE)) > 0)
 	{
-		if (write(file2, buffer, bytes) != bytes)
+		if (write(file_to, buffer, bytes) != bytes)
 		{
 			dprintf(2, "Error: Can't write to %s\n", argv[2]);
-			close(file1);
-			close(file2);
+			close(file_from);
+			close(file_to);
 			exit(99);
 		}
 	}
@@ -50,14 +51,14 @@ int main(int argc, char *argv[])
 		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-	if (close(file1) == -1)
+	if (close(file_from) == -1)
 	{
-		dprintf(2, "Error: Can't close fd %d\n", file1);
+		dprintf(2, "Error: Can't close fd %d\n", file_from);
 		exit(100);
 	}
-	if (close(file2) == -1)
+	if (close(file_to) == -1)
 	{
-		dprintf(2, "Error: Can't close fd %d\n", file2);
+		dprintf(2, "Error: Can't close fd %d\n", file_to);
 		exit(100);
 	}
 	return (0);
