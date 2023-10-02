@@ -2,6 +2,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include "main.h"
+#include <string.h>
 /**
  * create_file - is the function to create file
  * @filename: is the pointer to the file
