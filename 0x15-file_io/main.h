@@ -4,6 +4,12 @@
 #include <stddef.h>
 #include <sys/types.h>
 
+/**
+ * struct file - is the custom file for size
+ * Always Return as specified
+ * @size: is the parameter given
+ * @ssize: is the general size
+ */
 typedef struct file
 {
 	size_t size;
