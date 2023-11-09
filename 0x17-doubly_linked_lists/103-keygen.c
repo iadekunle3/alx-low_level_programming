@@ -5,7 +5,12 @@
 #define PASSWORD_LENGTH 7
 #define CODEX "A-CHRDw87lNS0E9B2TibgpnMVys5XzvtOGJcYLU+4mjW6fxqZeF3Qa1rPhdKIouk"
 #define CODEX_LENGTH 64
-
+/**
+ * generate_password - is the func to generate password
+ * @password: is the first pointer to password
+ * @argv: is the argument vector
+ * Return: as specified
+ */
 void generate_password(char *password, char *argv)
 {
 	int len = strlen(argv), i, tmp;
@@ -43,7 +48,12 @@ void generate_password(char *password, char *argv)
 
 	password[6] = '\0';
 }
-
+/**
+ * main - is the function to test password
+ * @argv: is the argument vector
+ * @argc: is the argument count
+ * Return: as specified
+ */
 int main(int __attribute__((__unused__)) argc, char *argv[])
 {
 	char password[PASSWORD_LENGTH];
